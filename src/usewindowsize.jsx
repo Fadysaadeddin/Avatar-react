@@ -13,7 +13,7 @@ function useWindowSize(minWidth, maxWidth) {
     };
 
     window.addEventListener("resize", updateSize);
-    updateSize(); // Check initial size
+    updateSize(); 
 
     return () => window.removeEventListener("resize", updateSize);
   }, [minWidth, maxWidth]);

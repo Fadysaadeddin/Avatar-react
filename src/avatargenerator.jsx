@@ -1,88 +1,10 @@
-// import React from "react";
-// import { BigHead } from "@bigheads/core";
-// import useWindowSize from "./usewindowsize";
 
-// const avatars = {
-//   Mithi: {
-//     skinTone: "light",
-//     eyes: "happy",
-//     eyebrows: "raised",
-//     mouth: "smile",
-//     hair: "short",
-//     hairColor: "black",
-//     faceMask: false,
-//     maskColor: "blue",
-//   },
-//   Diana: {
-//     skinTone: "brown",
-//     eyes: "normal",
-//     eyebrows: "leftLowered",
-//     mouth: "serious",
-//     hair: "bob",
-//     hairColor: "blonde",
-//     faceMask: false,
-//     maskColor: "red",
-//   },
-//   Mikong: {
-//     skinTone: "dark",
-//     eyes: "squint",
-//     eyebrows: "angry",
-//     mouth: "openSmile",
-//     hair: "buzz",
-//     hairColor: "brown",
-//     faceMask: false,
-//     maskColor: "black",
-//   },
-// };
-
-// const getRandomFeature = (options) => options[Math.floor(Math.random() * options.length)];
-
-// const AvatarGenerator = () => {
-//   const isBig = useWindowSize(1001, Infinity);
-//   const isMedium = useWindowSize(700, 1000);
-//   const isSmall = useWindowSize(0, 699);
-
-//   let avatar = null;
-//   let avatarName = "";
-
-//   if (isBig) {
-//     avatar = avatars.Mithi;
-//     avatarName = "Mithi";
-//   } else if (isMedium) {
-//     avatar = avatars.Diana;
-//     avatarName = "Diana";
-//   } else if (isSmall) {
-//     avatar = avatars.Mikong;
-//     avatarName = "Mikong";
-//   }
-
-//   if (!avatar) return null;
-
-//   return (
-//     <div style={{ textAlign: "center", padding: "20px" }}>
-//       <h2>Current Avatar: {avatarName}</h2>
-//       <BigHead
-//         {...avatar}
-//         hat={getRandomFeature(["beanie", "turban", "none"])}
-//         hatColor={getRandomFeature(["red", "blue", "green", "yellow"])}
-//         accessory={getRandomFeature(["none", "sunglasses", "roundGlasses", "tinyGlasses"])}
-//         clothing={getRandomFeature(["shirt", "dressShirt", "vneck"])}
-//         clothingColor={getRandomFeature(["white", "red", "blue", "black"])}
-//         graphic={getRandomFeature(["react", "vue", "gatsby", "none"])}
-//       />
-//     </div>
-//   );
-// };
-
-// export default AvatarGenerator;
-
-
-// src/hooks/useWindowSize.js
 import { useEffect, useState, useDebugValue } from "react";
 
 export function useWindowSize() {
     const [windowSize, setWindowSize] = useState({ width: undefined, height: undefined });
     useDebugValue(`width: ${windowSize.width}px, height: ${windowSize.height}px`);
+    
 
     useEffect(() => {
         const handleResize = () =>
